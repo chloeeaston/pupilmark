@@ -22,16 +22,24 @@ public class SCHOOL
     }
 
     public void setupPupilList() throws IOException 
-   
+
     { // placeholder
         System.out.println("School : pupilmark update");
         System.out.println("** Preparing to read data file.");
         String [] dataRows = pupilmark.readCSVtable ();
         noOfPupils = dataRows.length -1;
         System.out.println("** " + noOfPupils + " rows read.\n\n");
+        pupilList = new PUPIL [noOfPupils];
+        
+        for (int i = 0; i < noOfPupils; i++) {
+            pupilList[i]= new PUPIL ();
+            pupilList[i].readPupilDetails(dataRows[i+1]);
+
+        }
     }
-    public void countpupilmark()
-    {
-        //placeholder
+        
+        public void countpupilmark()
+        {
+            //placeholder
+        }
     }
-}
