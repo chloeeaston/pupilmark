@@ -11,7 +11,7 @@ public class PUPIL
 
         fname = "";
         sname = "";
-        pupilmark = i;
+        pupilmark = 0;
     }
     // file handling store details from file 
     public void readPupilDetails (String dataItems)
