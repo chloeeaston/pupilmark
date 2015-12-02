@@ -30,16 +30,28 @@ public class SCHOOL
         noOfPupils = dataRows.length -1;
         System.out.println("** " + noOfPupils + " rows read.\n\n");
         pupilList = new PUPIL [noOfPupils];
-        
+
         for (int i = 0; i < noOfPupils; i++) {
             pupilList[i]= new PUPIL ();
             pupilList[i].readPupilDetails(dataRows[i+1]);
 
         }
     }
-        
-        public void countpupilmark()
+
+    public void countpupilmark() throws IOException
+    {
+        //placeholder
+        for (int i = 0; i < noOfPupils; i ++)
         {
-            //placeholder
+            if ((pupilList[i].getpupilmark() < pupilList [maxDataPosition].getData ))  {
+                MaxDataPosition = 1; 
+            }
+
+        } 
+        System.out.print("Positon is:" + maxDataPosition + " , Value is:");
+            dataList[maxDataPosition].displayData();
+            System.out.println(); 
         }
     }
+
+    

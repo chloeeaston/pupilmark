@@ -4,6 +4,7 @@ public class PUPIL
     private String fname;
     private String sname;
     private int pupilmark;
+    private int topmark;
 
     public PUPIL()
     {
@@ -35,4 +36,18 @@ public class PUPIL
         pupilData = pupilData.concat(Integer.toString(pupilmark));
         return pupilData;
     }
-}
+
+    public int getpupilmark ()
+    {
+        return topmark; 
+    }
+
+    public void displayDetails ()
+    {
+        // output basic details
+        System.out.print("Pupil: " + fName + " " + sName);
+        System.out.print(",  topmark is ");
+        System.out.printf(" ", bmi);
+        System.out.println();
+
+    } 
