@@ -5,7 +5,11 @@ public class PUPIL
     private String sname;
     private int pupilmark;
     private int topmark;
-
+    private int maxDataPosition;
+    
+ 
+    
+  
     public PUPIL()
     {
         //constuctor 
@@ -13,6 +17,7 @@ public class PUPIL
         fname = "";
         sname = "";
         pupilmark = 0;
+        maxDataPosition = 0;
     }
     // file handling store details from file 
     public void readPupilDetails (String dataItems)
@@ -39,15 +44,13 @@ public class PUPIL
 
     public int getpupilmark ()
     {
-        return topmark; 
+        return pupilmark; 
     }
 
     public void displayDetails ()
     {
         // output basic details
-        System.out.print("Pupil: " + fName + " " + sName);
-        System.out.print(",  topmark is ");
-        System.out.printf(" ", bmi);
+        System.out.print("Pupil: " + fname + " " + sname);
+        System.out.print(",  pupilmark is " + pupilmark);
         System.out.println();
-
-    } 
+    } } 

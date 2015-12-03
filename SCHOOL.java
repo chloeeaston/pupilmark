@@ -4,9 +4,12 @@ public class SCHOOL
 {
     // array of PUPIL objects
     private PUPIL pupilList[]; 
+    private int maxDataPosition ;
+    
     // number of pupils to be called
     int noOfPupils;
     FILEREADCSV pupilmark;
+    
 
     public SCHOOL()
     { pupilmark = new FILEREADCSV(); 
@@ -18,6 +21,7 @@ public class SCHOOL
     { 
         setupPupilList();
         countpupilmark();
+        
 
     }
 
@@ -37,19 +41,24 @@ public class SCHOOL
 
         }
     }
+    public void findmaxDataPosition ()
+    {
+        int maxDataPosition = 0;
+    } 
+    
 
     public void countpupilmark() throws IOException
     {
         //placeholder
         for (int i = 0; i < noOfPupils; i ++)
         {
-            if ((pupilList[i].getpupilmark() < pupilList [maxDataPosition].getData ))  {
-                MaxDataPosition = 1; 
+            if (pupilList[i].getpupilmark() < pupilList [maxDataPosition].getpupilmark())  {
+                maxDataPosition = 1; 
             }
 
         } 
-        System.out.print("Positon is:" + maxDataPosition + " , Value is:");
-            dataList[maxDataPosition].displayData();
+        System.out.print("Topmark is:" + maxDataPosition );
+            pupilList[maxDataPosition].displayDetails();
             System.out.println(); 
         }
     }
